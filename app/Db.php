@@ -23,7 +23,7 @@ class Db
             throw new \Exception("Ошибка подключения", 500);
             die();
         }
-        
+
     }
 
 }
