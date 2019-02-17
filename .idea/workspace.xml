@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bec68ae7-6ba0-4850-b78b-62ca7f539e4a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Db.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +28,8 @@
       <file leaf-file-name="Db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="694">
-              <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+            <state relative-caret-position="621">
+              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
               <folding>
                 <element signature="e#116#142#0#PHP" expanded="true" />
               </folding>
@@ -157,12 +156,12 @@
       <option name="presentableId" value="Default" />
       <updated>1550302208777</updated>
       <workItem from="1550302210044" duration="5735000" />
-      <workItem from="1550381474977" duration="1063000" />
+      <workItem from="1550381474977" duration="2955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6798000" />
+    <option name="totallyTimeSpent" value="8690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -285,8 +284,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="694">
-          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        <state relative-caret-position="621">
+          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="50" selection-end-column="8" />
           <folding>
             <element signature="e#116#142#0#PHP" expanded="true" />
           </folding>
