@@ -29,12 +29,28 @@ class Db
 //        $book = $book->export();
 //        debug($book);
 
+        /* Retrieve */
+
 //        $books = R::loadAll('book', [1,3]);
 //        debug($books);
 
-        $book = R::load('book', 1);
-        $book->author = "Джером Сэленджер";
-        R::store($book);
+        /* DELETE */
+
+//        $newBook = R::dispense('book');
+//        $newBook->title="Bright2 Book";
+//        $newBook->price = 5;
+//        R::store($newBook);
+
+//        $book = R::load('book', 5); //green book
+//        R::trash($book);
+
+//        $books = R::loadAll('book', [4,6]);
+//        R::trashAll($books);
+
+//        R::trashBatch('book', [7,8]);
+
+//        R::wipe('book');
+        
     }
 
 }
