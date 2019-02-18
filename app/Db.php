@@ -15,6 +15,7 @@ class Db
 {
     use TSingleton;
 
+
     private function __construct()
     {
         $db_conf = require_once CONF . "/db_conf.php";
@@ -26,42 +27,18 @@ class Db
             die();
         }
 
-        R::debug(1);
+        R::debug(1, 3);
 
-//        $fields = R::inspect("book");
-//        debug($fields);
+        $book = R::findOne("book");
+        $books_title = R::getCol("SELECT title FROM book WHERE id = ? ORDER BY id DESC", [4]);
 
-//        $listOfTables = R::inspect();
-//        debug($listOfTables);
+        $parametrs = ["Hello, Wolrd!", 1, 55];
+        /*R::exec("INSERT INTO book (title, price, category_id) VALUES (". R::genSlots($parametrs) .")", $parametrs);
+
+        $insertedId = R::getInsertID();
+        debug($insertedId);*/
 
 
-//        R::addDatabase("db2", $db_conf2['dsn'], $db_conf2['user'], $db_conf2['password'], true);
-//        R::selectDatabase("db2");
-
-//        $listOfTables2 = R::inspect();
-//        debug($listOfTables2);
-
-        /*
-        $book = R::dispense("book");
-        $category = R::dispense("category");
-
-        $category->category = "bulat's category";
-
-        R::begin();
-        try {
-            $category_id = R::store($category);
-
-            $book->title = "bulat's first book";
-            $book->price = 10;
-            $book->category_id = $category_id;
-
-            R::store($book);
-            R::commit();
-        } catch (\Exception $e) {
-            R::rollback();
-            echo $e->getMessage();
-        }
-        */
 
     }
 
