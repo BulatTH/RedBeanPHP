@@ -27,7 +27,7 @@ class Db
             die();
         }
 
-//        R::debug(1, 3);
+        R::debug(1, 3);
 
         R::freeze(false);
 
