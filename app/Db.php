@@ -76,11 +76,12 @@ class Db
 
 
         // Добавление еще одного товара
+
         /*$category = R::load("category", 1);
 
         $product3 = R::dispense("product");
-        $product3->title = "S9";
-        $category->ownProductList[] = $product3;
+        $product3->title = "S17";
+        $category->noLoad()->ownProductList[] = $product3;
         R::store($category);*/
 
     }
