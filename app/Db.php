@@ -84,6 +84,36 @@ class Db
         $category->noLoad()->ownProductList[] = $product3;
         R::store($category);*/
 
+        // Открепление сво-во от родителя (без удаления)
+
+        /*$category = R::load("category", 2);
+        unset( $category->ownProductList[3] );
+        R::store($category);*/
+
+
+        // Эксклюзивный режим (с удалением)
+        /*$category = R::load("category", 2);
+        unset( $category->xownProductList[3] );
+        R::store($category);*/
+
+        //Using SQL Snippets
+        /*$category = R::load("category", 1);
+
+        echo "<ul>
+            <li>{$category->title}</li>";
+            echo "<ul>";
+                foreach ($category->withCondition("price > ? ORDER BY id DESC LIMIT 1", [1000])->ownProductList as $product){
+                    echo "<li> {$product->title} </li>";
+                }
+            echo "</ul>";
+        echo "</ul>";*/
+
+        // Counting
+        /*debug(R::count("product"));*/
+
+        /*$category = R::load("category", 1);
+        debug($category->withCondition("id > ?", [1])->countOwn("product"));*/
+
     }
 
 }
