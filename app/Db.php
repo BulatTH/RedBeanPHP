@@ -27,18 +27,61 @@ class Db
             die();
         }
 
-        R::debug(1, 3);
+//        R::debug(1, 3);
 
-        $book = R::findOne("book");
-        $books_title = R::getCol("SELECT title FROM book WHERE id = ? ORDER BY id DESC", [4]);
+        R::freeze(false);
 
-        $parametrs = ["Hello, Wolrd!", 1, 55];
-        /*R::exec("INSERT INTO book (title, price, category_id) VALUES (". R::genSlots($parametrs) .")", $parametrs);
+        // Без отношений
+        /*$category = R::dispense("category");
+        $category->title = "Samsung";
+        $category_id = R::store($category);
 
-        $insertedId = R::getInsertID();
-        debug($insertedId);*/
+        $product = R::dispense("product");
+        $product->title = "S8";
+        $product->category_id = $category_id;
+        R::store($product);*/
+
+        // Реализация связей
+        /*$category = R::dispense("category");
+        $category->title = "Apple";
+
+        $product1 = R::dispense("product");
+        $product1->title = "Iphone 7";
+
+        $product2 = R::dispense("product");
+        $product2->title = "Iphone 10";
 
 
+        $category->ownProductList = [$product1, $product2];
+ //        $category->ownProductList[] = $product1;
+//        $category->ownProductList[] = $product2;
+
+        R::store($category);
+        */
+
+
+        // Получение собственного списка категорий
+        /*$category = R::load("category", 2);
+
+        debug($category);
+
+        echo "<ul> 
+            <li>{$category->title}</li>";
+            echo "<ul>";
+                foreach ($category->ownProductList as $product){
+                    echo "<li> {$product->title} </li>";
+                }
+            echo "</ul>";
+        echo "</ul>";*/
+
+
+        // Добавление еще одного товара
+        /*$category = R::load("category", 1);
+
+        $product3 = R::dispense("product");
+        $product3->title = "S9";
+        $category->ownProductList[] = $product3;
+        R::store($category);*/
 
     }
 
