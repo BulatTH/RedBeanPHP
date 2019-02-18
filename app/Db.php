@@ -42,36 +42,30 @@ class Db
 //            R::store($categoryArr[$a]);
 //        }
 
-//        $books = R::findAll('book');
+//        var_dump( R::exec("UPDATE book SET title = :title WHERE id = 5", [
+//            ":title" => "new title #5"
+//        ]) );
 
-//        $collection = R::findCollection('book');
-//        while ($item = $collection->next()) {
-////            debug($item);
-//            $item->price = 3;
-//            R::store($item);
-//        }
-
-//        debug($collection);
-
-//        $books = R::findLike('book',
-//            ['title'=>[ "Book #1", "Book #9"]]
-//        );
+//        $books = R::getAll("SELECT * FROM book WHERE id > ?", [3]);
 //        debug($books);
 
+        R::debug(1);
 
-//        $book = R::findOrCreate("book", [
-//            'title'=>'my book',
-//            'price' => 3.99
+//        $book = R::getRow("SELECT * FROM book LIMIT 1");
+//        $books = R::getCol("SELECt title FROM book");
+//        $book = R::getCell("SELECt title FROM book LIMIT 1");
+
+//        $books = R::getAll("SELECT id, title FROM book WHERE id > ?", [8]);
+//        $books = R::getAssoc("SELECT * FROM book WHERE id > ?", [8]);
+
+
+//        R::exec("INSERT INTO book(title, price, category_id) VALUES (?, ?, ?)", [
+//            "Wow, new boook",
+//            "7",
+//            "3",
 //        ]);
-//        debug($book);
-
-        $booksWithCategory = R::findMulti('book,category', '
-            SELECT book.*, category.* FROM book
-            INNER JOIN category ON category.id=book.category_id
-            WHERE category.id=:cat_id
-        ', [':cat_id'=>2]);
-
-        debug($booksWithCategory);
+//        $id = R::getInsertID();
+//        debug($id);
 
     }
 
