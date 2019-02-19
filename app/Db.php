@@ -31,24 +31,44 @@ class Db
 
 //        R::freeze(false);
 
-        /*$product = R::dispense("product");
-        $product->title = "Iphone XR";
-        $category = R::load("category", 2);
-        $product->category = $category;
-        R::store($product);*/
+        // Many-to-many
 
-        // Exist
-        /*$product = R::findOne("product", " ORDER BY id DESC");
-        var_dump($product->exists("category123"));*/
+        /*$category1 = R::dispense("category");
+        $category1->title = "Футболки мужские";
 
-        // Отвязка категории от продукта
-        /*$product = R::findOne("product", " ORDER BY id DESC");
-        $product->category = null;
-        R::store($product);*/
+        $category2 = R::dispense("category");
+        $category2->title = "Футболки женские";
 
+        $product = R::dispense("product");
+        $product->title = "Футболка унисекс";
+
+        $category1->sharedProductList[] = $product;
+        $category2->sharedProductList[] = $product;
+
+        R::storeAll([$category1, $category2]);*/
+
+
+
+        /*$category1 = R::load("category", 1);
+        $category2 = R::load("category", 2);
+
+        $product = R::dispense("product");
+
+        $category1->sharedProductList[] = $product;
+        $category2->sharedProductList[] = $product;
+
+        R::storeAll([$category1, $category2]);*/
+
+
+        /*$product = R::load("product", 2);
+        $product->sharedCategoryList;
+        debug($product);*/
+
+
+        // Deleting
+        /*$product2 = R::load("product", 2);
+        R::trash($product2);*/
         
-        /*$productsWithoutCategory = R::find("product", " category_id IS NULL");
-        debug($productsWithoutCategory);*/
     }
 
 }
