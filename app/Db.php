@@ -29,91 +29,26 @@ class Db
 
         R::debug(1, 3);
 
-        R::freeze(false);
+//        R::freeze(false);
 
-        // Без отношений
-        /*$category = R::dispense("category");
-        $category->title = "Samsung";
-        $category_id = R::store($category);
-
-        $product = R::dispense("product");
-        $product->title = "S8";
-        $product->category_id = $category_id;
+        /*$product = R::dispense("product");
+        $product->title = "Iphone XR";
+        $category = R::load("category", 2);
+        $product->category = $category;
         R::store($product);*/
 
-        // Реализация связей
-        /*$category = R::dispense("category");
-        $category->title = "Apple";
+        // Exist
+        /*$product = R::findOne("product", " ORDER BY id DESC");
+        var_dump($product->exists("category123"));*/
 
-        $product1 = R::dispense("product");
-        $product1->title = "Iphone 7";
+        // Отвязка категории от продукта
+        /*$product = R::findOne("product", " ORDER BY id DESC");
+        $product->category = null;
+        R::store($product);*/
 
-        $product2 = R::dispense("product");
-        $product2->title = "Iphone 10";
-
-
-        $category->ownProductList = [$product1, $product2];
- //        $category->ownProductList[] = $product1;
-//        $category->ownProductList[] = $product2;
-
-        R::store($category);
-        */
-
-
-        // Получение собственного списка категорий
-        /*$category = R::load("category", 2);
-
-        debug($category);
-
-        echo "<ul> 
-            <li>{$category->title}</li>";
-            echo "<ul>";
-                foreach ($category->ownProductList as $product){
-                    echo "<li> {$product->title} </li>";
-                }
-            echo "</ul>";
-        echo "</ul>";*/
-
-
-        // Добавление еще одного товара
-
-        /*$category = R::load("category", 1);
-
-        $product3 = R::dispense("product");
-        $product3->title = "S17";
-        $category->noLoad()->ownProductList[] = $product3;
-        R::store($category);*/
-
-        // Открепление сво-во от родителя (без удаления)
-
-        /*$category = R::load("category", 2);
-        unset( $category->ownProductList[3] );
-        R::store($category);*/
-
-
-        // Эксклюзивный режим (с удалением)
-        /*$category = R::load("category", 2);
-        unset( $category->xownProductList[3] );
-        R::store($category);*/
-
-        //Using SQL Snippets
-        /*$category = R::load("category", 1);
-
-        echo "<ul>
-            <li>{$category->title}</li>";
-            echo "<ul>";
-                foreach ($category->withCondition("price > ? ORDER BY id DESC LIMIT 1", [1000])->ownProductList as $product){
-                    echo "<li> {$product->title} </li>";
-                }
-            echo "</ul>";
-        echo "</ul>";*/
-
-        // Counting
-        /*debug(R::count("product"));*/
-
-        /*$category = R::load("category", 1);
-        debug($category->withCondition("id > ?", [1])->countOwn("product"));*/
-
+        
+        /*$productsWithoutCategory = R::find("product", " category_id IS NULL");
+        debug($productsWithoutCategory);*/
     }
 
 }
