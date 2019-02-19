@@ -28,8 +28,13 @@
       <file leaf-file-name="Db.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Db.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="841">
               <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+=======
+            <state relative-caret-position="460">
+              <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+>>>>>>> 49b406d6e482c643d1e533f5a03d8dd891e569a4
               <folding>
                 <element signature="e#116#142#0#PHP" expanded="true" />
               </folding>
@@ -163,13 +168,21 @@
       <workItem from="1550302210044" duration="5735000" />
       <workItem from="1550381474977" duration="5459000" />
       <workItem from="1550470325350" duration="1843000" />
+<<<<<<< HEAD
       <workItem from="1550485650417" duration="8067000" />
       <workItem from="1550552194243" duration="2222000" />
+=======
+      <workItem from="1550485650417" duration="7930000" />
+>>>>>>> 49b406d6e482c643d1e533f5a03d8dd891e569a4
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="23326000" />
+=======
+    <option name="totallyTimeSpent" value="20967000" />
+>>>>>>> 49b406d6e482c643d1e533f5a03d8dd891e569a4
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -364,8 +377,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Db.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="841">
           <caret line="63" column="36" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
+=======
+        <state relative-caret-position="460">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+>>>>>>> 49b406d6e482c643d1e533f5a03d8dd891e569a4
           <folding>
             <element signature="e#116#142#0#PHP" expanded="true" />
           </folding>

@@ -31,6 +31,7 @@ class Db
 
 //        R::freeze(false);
 
+<<<<<<< HEAD
         // Many-to-many
 
         /*$category1 = R::dispense("category");
@@ -64,6 +65,9 @@ class Db
         $product->sharedCategoryList;
         debug($product);*/
 
+=======
+        
+>>>>>>> 49b406d6e482c643d1e533f5a03d8dd891e569a4
 
         // Deleting
         /*$product2 = R::load("product", 2);
